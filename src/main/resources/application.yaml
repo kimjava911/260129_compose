@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: beanstalk
+  profiles:
+    active: dev
