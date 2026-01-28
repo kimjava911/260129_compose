@@ -1,7 +1,9 @@
 spring:
   application:
-    name: beanstalk
+    name: compose
   profiles:
     active: dev
 server:
   port: ${SERVER_PORT:8080}
+app:
+  name: ${APP_NAME:default}

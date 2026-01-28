@@ -1,4 +1,4 @@
-package kr.java.beanstalk.entity;
+package kr.java.compose.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

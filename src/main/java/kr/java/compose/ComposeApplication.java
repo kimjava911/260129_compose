@@ -1,13 +1,13 @@
-package kr.java.beanstalk;
+package kr.java.compose;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BeanstalkApplication {
+public class ComposeApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BeanstalkApplication.class, args);
+        SpringApplication.run(ComposeApplication.class, args);
     }
 
 }

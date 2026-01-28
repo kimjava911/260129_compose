@@ -1,9 +1,10 @@
-package kr.java.beanstalk.controller;
+package kr.java.compose.controller;
 
-import kr.java.beanstalk.dto.BookForm;
-import kr.java.beanstalk.entity.Book;
-import kr.java.beanstalk.repository.BookRepository;
+import kr.java.compose.dto.BookForm;
+import kr.java.compose.entity.Book;
+import kr.java.compose.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +15,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class BookController {
     private final BookRepository bookRepository;
 
+    @Value("${app.name}")
+    private String appName;
+
     @GetMapping
     public String index(Model model) {
         model.addAttribute("books", bookRepository.findAll());
+        model.addAttribute("appName", appName);
         return "index";
     }
 
